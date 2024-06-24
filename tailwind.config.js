@@ -4,7 +4,12 @@ export default {
     "./app/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'kuning': '#FFC300',
+        'oren': '#FF8A00',
+      }
+    },
   },
   plugins: [],
 }
