@@ -38,6 +38,23 @@
 }
   
 .vote-now-button:hover {
-    color: white;
+    color: #FACC15;
+    background-color: #0f172a;
+}
+
+.back-next-button {
+    transition: transform 0.3s ease;
+}
+
+.back-next-button:hover {
+    transform: scale(1.1);
+}
+
+.submit-button {
+    transition: color 0.4s, background-color 0.4s;
+}
+
+.submit-button:hover {
+    color: #FACC15;
     background-color: #0f172a;
 }

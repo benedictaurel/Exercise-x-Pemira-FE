@@ -27,7 +27,7 @@ const FAQContainer = ({ children }) => (
   </div>
 );
 
-function MyComponent() {
+function LandingPage() {
   return (
     <div className="flex flex-col items-center bg-white">
       <Navbar />
@@ -86,9 +86,11 @@ function MyComponent() {
           <VotingOption title="ONLINE VOTING" imageSrc={logoOnline} />
         </div>
       </div>
-      <button className="vote-now-button justify-center px-8 py-5 mt-16 text-2xl font-extrabold tracking-normal leading-6 text-center text-sky-900 bg-yellow-400 rounded-[999px] max-md:px-5 max-md:mt-10">
-        VOTE NOW
-      </button>
+      <a href="/voting">
+        <button className="vote-now-button justify-center px-8 py-5 mt-16 text-2xl font-extrabold tracking-normal leading-6 text-center text-sky-900 bg-yellow-400 rounded-[999px] max-md:px-5 max-md:mt-10">
+          VOTE NOW
+        </button>
+      </a>
       <section className="mt-80 max-md:mt-10 max-md:max-w-full text-center">
         <h2 className="text-5xl font-bold tracking-normal leading-6 text-sky-900 max-md:max-w-full max-md:text-4xl">
           FREQUENTLY ASKED QUESTION
@@ -120,4 +122,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default LandingPage;
