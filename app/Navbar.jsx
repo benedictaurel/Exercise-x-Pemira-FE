@@ -7,9 +7,9 @@ function Navbar() {
         <nav className="flex gap-5 items-center max-md:flex-wrap max-md:max-w-full">
           <div className="flex gap-5">
             <a href="/" className="nav-link">Home</a>
-            <a href="/candidate" className="nav-link">Candidate</a>
+            <a href="/#candidate" className="nav-link">Candidate</a>
             <a href="/voting" className="nav-link">E-Voting</a>
-            <a href="/faq" className="nav-link">FAQ</a>
+            <a href="/#faq" className="nav-link">FAQ</a>
           </div>
           <button className="px-8 py-4 text-center text-bold rounded-full shadow-2xl max-md:px-5 bg-gradient-to-b from-kuning to-oren via-kuning button-zoom">
             Login SSO

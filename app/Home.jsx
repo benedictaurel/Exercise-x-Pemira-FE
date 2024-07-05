@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import logoOffline from "./routes/images/offline.png";
 import logoOnline from "./routes/images/online.png";
+import pointRight from "./routes/images/pointRight.svg";
 
 const CandidateCard = ({ title }) => (
   <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
@@ -20,10 +21,13 @@ const VotingOption = ({ title, imageSrc }) => (
   </div>
 );
 
-const FAQContainer = ({ children }) => (
-  <div className="flex items-center justify-between px-6 py-4 mt-8 bg-yellow-400 rounded-full">
-    <span className="text-lg font-semibold text-black pl-4">{children}</span>
-    <span className="text-black">&#9660;</span>
+const FAQContainer = ({ question, answer }) => (
+  <div className="max-w-full w-[768px] faq-container flex flex-col items-start justify-between px-6 py-4 mt-8 bg-yellow-400 rounded-full overflow-hidden transition-all duration-300 ease-in-out">
+    <div className="flex items-center justify-between w-full">
+      <span className="text-lg font-semibold text-black pl-4">{question}</span>
+      <img src={pointRight} alt="Point Right" className="w-5 h-5 point-img" />
+    </div>
+    <div className="faq-answer text-black mt-4 hidden">{answer}</div>
   </div>
 );
 
@@ -56,7 +60,7 @@ function LandingPage() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center px-16 py-14 mt-20 w-full border border-solid border-zinc-400 max-w-[1175px] rounded-[50px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
+      <section id="candidate" className="flex flex-col items-center px-16 py-14 mt-20 w-full border border-solid border-zinc-400 max-w-[1175px] rounded-[50px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
         <h2 className="text-5xl font-bold text-center tracking-normal leading-6 text-yellow-400 max-md:max-w-full max-md:text-4xl">
           <span className="text-sky-900">GET TO KNOW YOUR</span> <span className="text-yellow-400">CANDIDATE</span>
         </h2>
@@ -91,31 +95,38 @@ function LandingPage() {
           VOTE NOW
         </button>
       </a>
-      <section className="mt-80 max-md:mt-10 max-md:max-w-full text-center">
+      <section id="faq" className="mt-80 max-md:mt-10 max-md:max-w-full text-center">
         <h2 className="text-5xl font-bold tracking-normal leading-6 text-sky-900 max-md:max-w-full max-md:text-4xl">
           FREQUENTLY ASKED QUESTION
         </h2>
-        <FAQContainer>
-          What is Lorem Ipsum?
-        </FAQContainer>
-        <FAQContainer>
-          Where does it come from?
-        </FAQContainer>
-        <FAQContainer>
-          Why do we use it?
-        </FAQContainer>
-        <FAQContainer>
-          Where can i get some?
-        </FAQContainer>
-        <FAQContainer>
-          How many people use Lorem Ipsum?
-        </FAQContainer>
-        <FAQContainer>
-          What is the function of Lorem Ipsum?
-        </FAQContainer>
-        <FAQContainer>
-          When did Lorem Ipsum first appear?
-        </FAQContainer>
+        <FAQContainer
+          question="What is Lorem Ipsum?"
+          answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam, velit sit amet posuere congue, lacus mauris dictum est, id luctus sapien ligula id urna. Phasellus convallis justo sit amet elit condimentum, id ultricies quam consectetur. In eget nibh consequat, lobortis massa quis, placerat ante. Fusce eu sollicitudin magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ut nisi justo. Aliquam porttitor fermentum tortor, quis sagittis dui porttitor eget."
+        />
+        <FAQContainer 
+          question="Where does it come from?"
+          answer="Contrary to popular belief, Lorem Ipsum is not simply random text."
+        />
+        <FAQContainer 
+          question="Why do we use it?" 
+          answer="It is a long established fact that a reader will be distracted by the readable content." 
+        />
+        <FAQContainer 
+          question="Where can I get some?" 
+          answer="There are many variations of passages of Lorem Ipsum available." 
+        />
+        <FAQContainer 
+          question="How many people use Lorem Ipsum?" 
+          answer="Numerous developers and designers use Lorem Ipsum as a placeholder text." 
+        />
+        <FAQContainer 
+          question="What is the function of Lorem Ipsum?" 
+          answer="Lorem Ipsum provides a natural looking block of text." 
+        />
+        <FAQContainer 
+          question="When did Lorem Ipsum first appear?" 
+          answer="Lorem Ipsum has been the industry's standard dummy text ever since the 1500s." 
+        />
       </section>
       <footer className="self-stretch mt-72 w-full bg-sky-900 min-h-[380px] max-md:mt-10 max-md:max-w-full" />
     </div>

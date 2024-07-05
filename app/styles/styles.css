@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .nav-link {
     position: relative;
     display: inline-block;
@@ -58,3 +62,37 @@
     color: #FACC15;
     background-color: #0f172a;
 }
+
+.faq-container {
+    cursor: pointer;
+    border-radius: 9999px;
+    overflow: hidden;
+    max-height: 60px;
+    transition: border-radius 0s ease, max-height 0.5s ease;
+}
+
+.faq-container:hover {
+    border-radius: 1.5rem;
+    max-height: 9999px;
+}
+
+.faq-container .point-img {
+    transition: rotate 0.3s ease;
+}
+
+.faq-container:hover .point-img {
+    rotate: 90deg;
+}
+  
+.faq-container .faq-answer {
+    display: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+}
+  
+.faq-container:hover .faq-answer {
+    display: block;
+    padding-bottom: 1rem;
+}
+  
