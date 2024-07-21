@@ -42,7 +42,7 @@ html {
 }
   
 .vote-now-button:hover {
-    color: #FACC15;
+    color: #FFFFFF;
     background-color: #0f172a;
 }
 
@@ -68,7 +68,7 @@ html {
     border-radius: 9999px;
     overflow: hidden;
     max-height: 60px;
-    transition: border-radius 0s ease, max-height 0.5s ease;
+    transition: border-radius 0s ease, max-height 6s ease;
 }
 
 .faq-container:hover {

@@ -91,7 +91,7 @@ function LandingPage() {
         </div>
       </div>
       <a href="/voting">
-        <button className="vote-now-button justify-center px-8 py-5 mt-16 text-2xl font-extrabold tracking-normal leading-6 text-center text-sky-900 bg-yellow-400 rounded-[999px] max-md:px-5 max-md:mt-10">
+        <button className="submit-button justify-center px-8 py-5 mt-16 text-2xl font-extrabold tracking-normal leading-6 text-center text-sky-900 bg-yellow-400 rounded-[999px] max-md:px-5 max-md:mt-10">
           VOTE NOW
         </button>
       </a>
